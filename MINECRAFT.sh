@@ -2,4 +2,4 @@
 source vars.sh
 set -x
 cd $serverDirInstalled
-java -jar $serverJar
+java -jar $serverJar -nogui
