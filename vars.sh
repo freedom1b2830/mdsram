@@ -1,6 +1,6 @@
 #OS
 install_ram="/dev/shm"
-packages="base htop maven git wget curl linux{,-firmware}"
+packages="base htop maven git wget curl linux linux-firmware"
 
 #Script
 own_variables="vars.sh"
