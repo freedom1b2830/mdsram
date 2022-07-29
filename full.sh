@@ -2,7 +2,7 @@
 source vars.sh
 set -x
 
-pacman -Sy wget git --needed --noconfirm openssh ||exit
+pacman -Sy wget git --needed --noconfirm openssh --needed ||exit
 cp $ssh_pub_key /root/.ssh/authorized_keys
 
 #/etc/ssh/sshd_config: PubkeyAuthentication yes
