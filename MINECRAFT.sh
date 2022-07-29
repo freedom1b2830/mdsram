@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 source vars.sh
 set -x
-cd $serverDir
+cd $serverDirInstalled
 java -jar $serverJar

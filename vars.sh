@@ -9,7 +9,8 @@ own_variablesInstalled=$install_ram/$own_variables
 #MINECRAFT
 serverInstallScript="MINECRAFT.sh"
 serverInstallScriptFullPath=$install_ram/$serverInstallScript
-serverDir=$install_ram/SERVER
+serverDirInstalled="SERVER"
+serverDir=$install_ram/$serverDirInstalled
 serverStartScript=$serverDir/"start.sh"
 serverJar=$serverDir/"server.jar"
 
