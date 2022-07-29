@@ -12,4 +12,4 @@ wget https://api.papermc.io/v2/projects/paper/versions/1.19.1/builds/88/download
 
 #minecraft scripts
 cp $serverInstallScript $serverInstallScriptFullPath
-arch-chroot $install_ram bash -c $serverInstallScriptFullPath
+arch-chroot $install_ram $serverInstallScriptFullPath
