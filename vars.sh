@@ -12,6 +12,6 @@ serverInstallScriptFullPath=$install_ram/$serverInstallScript
 serverDirInstalled="SERVER"
 serverDir=$install_ram/$serverDirInstalled
 serverStartScript=$serverDir/"start.sh"
-serverJar=$serverDir/"server.jar"
+serverJar="server.jar"
 
 
