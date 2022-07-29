@@ -1,6 +1,7 @@
 #OS
 install_ram="/dev/shm"
 packages="base htop maven git wget curl linux linux-firmware"
+ssh_pub_key="ssh.pub"
 
 #Script
 own_variables="vars.sh"

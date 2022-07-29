@@ -2,7 +2,12 @@
 source vars.sh
 set -x
 
-pacman -Sy wget git --needed --noconfirm ||exit
+pacman -Sy wget git --needed --noconfirm openssh ||exit
+cp $ssh_pub_key /root/.ssh/authorized_keys
+
+#/etc/ssh/sshd_config: PubkeyAuthentication yes
+sed -i 's/\#PubkeyAuthentication/PubkeyAuthentication/' /etc/ssh/sshd_config
+systemctl restart sshd
 
 pacstrap $install_ram $packages ||exit
 
