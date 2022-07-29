@@ -1,0 +1,4 @@
+full.sh->OS
+full.sh->chroot->MINECRAFT.sh
+MINECRAFT.sh->wget SERVER.jar
+MINECRAFT.sh->SERVER.jar
