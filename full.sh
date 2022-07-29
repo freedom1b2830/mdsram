@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 source vars.sh
 set -x
-pacman -Syy wget git --needed --noconfirm
 
-
+pacman -Sy wget git --needed --noconfirm
 
 pacstrap --needed --noconfirm $install_ram $packages
 
