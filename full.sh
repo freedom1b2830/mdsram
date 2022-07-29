@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 source vars.sh
-
+set -x
 pacman -Syy wget git --needed --noconfirm
 
 
