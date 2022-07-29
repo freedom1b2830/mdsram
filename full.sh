@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 source vars.sh
 
+pacman -Syy wget git --needed --noconfirm
+
+
+
 pacstrap --needed --noconfirm $install_ram $packages
 
 mkdir -pv $serverDir
