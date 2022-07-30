@@ -2,8 +2,12 @@
 source vars.sh
 set -x
 
-pacman -Sy archlinux-keyring  --needed --noconfirm ||exit
+#this repo
+git pull
+git submodule update --init --recursive
 
+#live os
+pacman -Sy archlinux-keyring  --needed --noconfirm ||exit
 pacman -S --needed --noconfirm htop wget git  openssh ||exit
 
 mkdir /root/.ssh -pv
@@ -13,6 +17,7 @@ cp $ssh_pub_key /root/.ssh/authorized_keys
 sed -i 's/\#PubkeyAuthentication/PubkeyAuthentication/' /etc/ssh/sshd_config
 systemctl restart sshd
 
+#target(in ram) OS
 pacstrap $install_ram archlinux-keyring --needed ||exit
 pacstrap $install_ram $packages --needed ||exit
 
