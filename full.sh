@@ -2,7 +2,7 @@
 source vars.sh
 set -x
 
-pacman -Sy htop wget git --needed --noconfirm openssh --needed ||exit
+pacman -Sy --needed --noconfirm htop wget git  openssh maven ||exit
 
 mkdir /root/.ssh -pv
 cp $ssh_pub_key /root/.ssh/authorized_keys
