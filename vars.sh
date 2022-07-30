@@ -3,6 +3,8 @@ install_ram="/dev/shm"
 packages="base htop maven git wget curl linux linux-firmware"
 ssh_pub_key="ssh.pub"
 
+rcon_passwd="fsvAZXSEcTeGwEQbcVzADgcwxVVcqEgGT5gS"
+
 #Script
 own_variables="vars.sh"
 own_variablesInstalled=$install_ram/$own_variables
