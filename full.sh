@@ -2,7 +2,7 @@
 source vars.sh
 set -x
 
-pacman -Sy wget git --needed --noconfirm openssh --needed ||exit
+pacman -Sy htop wget git --needed --noconfirm openssh --needed ||exit
 
 mkdir /root/.ssh -pv
 cp $ssh_pub_key /root/.ssh/authorized_keys
@@ -11,7 +11,7 @@ cp $ssh_pub_key /root/.ssh/authorized_keys
 sed -i 's/\#PubkeyAuthentication/PubkeyAuthentication/' /etc/ssh/sshd_config
 systemctl restart sshd
 
-pacstrap $install_ram $packages ||exit
+pacstrap $install_ram $packages --needed ||exit
 
 mkdir -pv $serverDir ||exit
 wget https://api.papermc.io/v2/projects/paper/versions/1.19.1/builds/88/downloads/paper-1.19.1-88.jar -c -O $serverJarFull ||exit
