@@ -7,11 +7,14 @@ cd $serverDirInstalled
 
 
 cd plugins
+pwd
 git clone https://github.com/freedom1b2830/minecraft-plugin-autobuilder freedom1b2830-plugin-autobuilder-SOURCES
 cd freedom1b2830-plugin-autobuilder-SOURCES
 ./update.sh
-cd ..
 
+pwd
+cd ../
+pwd
 java -jar $serverJar -nogui
 
 #eula
